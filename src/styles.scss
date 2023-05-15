@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
+https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
+*/
+@use '@angular/material' as mat;
+
+$L50: mat.define-palette(mat.$blue-palette,50);
+$L100: mat.define-palette(mat.$blue-palette,100);
+$L200: mat.define-palette(mat.$blue-palette,200);
+$L400: mat.define-palette(mat.$blue-palette,400);
+$L300: mat.define-palette(mat.$blue-palette,300);
+$L500: mat.define-palette(mat.$blue-palette,500);
+$L600: mat.define-palette(mat.$blue-palette,600);
+$L700: mat.define-palette(mat.$blue-palette,700);
+$L800: mat.define-palette(mat.$blue-palette,800);
+$L900: mat.define-palette(mat.$blue-palette,900);
+$LA100: mat.define-palette(mat.$blue-palette,A100);
+$LA200: mat.define-palette(mat.$blue-palette,A200);
+$LA300: mat.define-palette(mat.$blue-palette,A400);
+$LA700: mat.define-palette(mat.$blue-palette,A700);
+
+html, body { height: 100%; background-color: mat.get-color-from-palette($L50)}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.typed-cursor{
+  font-size: 2rem !important;
+}
