@@ -1,0 +1,35 @@
+<section class="section_container">
+
+    <mat-card class="left_div" >
+      <mat-card-content >
+          <button *ngFor="let b of buttonsToInfo"  mat-stroked-button (click)="getInfoButton(b.buttonNumber)">{{b.buttonName}}</button>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="righ_div">
+      <mat-card-content *ngIf="buttonInfo === 0 || buttonInfo === 1 || buttonInfo === 2 || buttonInfo === 3 || buttonInfo === 4|| buttonInfo === 5; then templateInfo">
+
+      </mat-card-content>
+    </mat-card>
+</section>
+<ng-template #templateInfo>
+  <mat-card class="card_template">
+    <mat-card-title>
+      {{titleFromButton}}
+    </mat-card-title>
+    <mat-card-content class="card_content_template" [ngClass]="buttonInfo===3?'row':'column'">
+        <mat-list *ngFor="let i of textInfo" [ngClass]="{'column':buttonInfo===3}">
+          <mat-list-item *ngIf="buttonInfo===3">{{i.name}}</mat-list-item>
+          <mat-list-item *ngIf="buttonInfo!==3">{{i.info}}</mat-list-item>
+          <mat-progress-bar *ngIf="buttonInfo===3" mode="determinate" value="{{i.percentage}}"></mat-progress-bar>
+        </mat-list>
+      <div *ngIf="buttonInfo=== 5">
+        <button mat-stroked-button > PDF</button>
+        <button mat-stroked-button > DOCX</button>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+
+
+</ng-template>

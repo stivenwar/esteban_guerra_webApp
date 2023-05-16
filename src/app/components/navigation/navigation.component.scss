@@ -1,0 +1,37 @@
+@use '@angular/material' as mat;
+@import "src/styles";
+
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.icon-nav{
+  color: mat.get-color-from-palette($L300);
+}
+.mat-toolbar{
+  background-color: mat.get-color-from-palette($L800);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
+  padding: 10px;
+
+  .text{
+    white-space: normal;
+  }
+  .div_enlaces{
+    display: flex;
+    flex-wrap: wrap;
+    a{
+      background-color: mat.get-color-from-palette($L300);
+      color: white;
+      margin: 10px;
+    }
+
+  }
+}

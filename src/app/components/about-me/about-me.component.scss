@@ -1,0 +1,27 @@
+.img_profile{
+  height: 350px;
+}
+.card_profile{
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+
+
+}
+
+@media all and (max-width: 1000px) {
+  .card_profile{
+    flex-direction: column;
+    width: 50%;
+  }
+}
+@media all and (max-width: 800px) {
+  .card_profile{
+    width: 60%;
+  }
+}
+@media all and (max-width: 600px) {
+  .card_profile{
+    width: 90%;
+  }
+}
