@@ -34,4 +34,13 @@ header{
     }
 
   }
+
+}
+::ng-deep .menu-nav{
+  background-color: mat.get-color-from-palette($L800);
+  a{
+    background-color: mat.get-color-from-palette($L300);
+    color: white;
+    margin: 10px;
+  }
 }

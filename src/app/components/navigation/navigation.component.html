@@ -1,12 +1,22 @@
-<header>
-  <mat-toolbar>
+<header >
+  <mat-toolbar >
       <a routerLink="home" mat-button ><mat-icon class="icon-nav">home</mat-icon></a>
-      <div class="div_enlaces">
+      <div *ngIf="mediaCambio=== false" class="div_enlaces">
         <a mat-raised-button routerLink="about" > About me</a>
         <a mat-raised-button routerLink="cv"> My CV</a>
         <a mat-raised-button>building...</a>
         <a mat-raised-button>building...</a>
       </div>
+      <div *ngIf="mediaCambio=== true" class="div_enlaces">
+        <a  mat-raised-button [matMenuTriggerFor]="menu">Menu</a>
+      </div>
   </mat-toolbar>
+  
+<mat-menu class="menu-nav" #menu="matMenu">
+    <a mat-menu-item routerLink="about" > About me</a>
+   <a mat-menu-item  routerLink="cv"> My CV</a>
+   <a mat-menu-item >building...</a>
+    <a mat-menu-item>building...</a>
+</mat-menu>
 </header>
 

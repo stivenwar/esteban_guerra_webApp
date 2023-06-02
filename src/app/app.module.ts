@@ -17,10 +17,12 @@ import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatDialogModule} from "@angular/material/dialog";
 import {APP_BASE_HREF, HashLocationStrategy, LocationStrategy} from "@angular/common";
+import {LayoutModule} from '@angular/cdk/layout';
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
 import {MatInputModule} from "@angular/material/input";
 import {MatListModule} from "@angular/material/list";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
         MatInputModule,
         MatListModule,
         MatProgressBarModule,
+        LayoutModule,
+        MatMenuModule
     ],
   providers: [
     // { provide: APP_BASE_HREF, useValue: '/' },
