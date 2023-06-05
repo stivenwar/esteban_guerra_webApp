@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import {CvInterface} from "../../interfaces/cv-interface";
 import * as info from "../../../assets/json/info.json"
 import {Observable} from "rxjs";
+import { MediaMatcher } from '@angular/cdk/layout';
+import { log } from 'console';
 
 @Component({
   selector: 'app-curriculum',
@@ -15,7 +17,8 @@ export class CurriculumComponent implements OnInit {
   buttonsToInfo: CvInterface[]
   data: any
   titleFromButton: string
-  constructor() {
+  mediaCambio: boolean| undefined
+  constructor(private matcher: MediaMatcher) {
     this.data = info
     this.buttonsToInfo = this.data.info
     this.buttonInfo = 0
@@ -24,6 +27,17 @@ export class CurriculumComponent implements OnInit {
 
   ngOnInit(): void {
 
+    const media = this.matcher.matchMedia('(max-width: 650px)')
+    console.log(media)
+    this.mediaCambio = media.matches;
+  
+    
+  }
+  @HostListener('window:resize', ['event'])
+  onResize(event: any){
+    const media = this.matcher.matchMedia('(max-width: 650px)')
+    console.log(media.matches);
+    this.mediaCambio = media.matches;
   }
 
 

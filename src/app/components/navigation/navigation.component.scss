@@ -27,7 +27,8 @@ header{
   .div_enlaces{
     display: flex;
     flex-wrap: wrap;
-    a{
+    justify-items: center;
+    .enlace{
       background-color: mat.get-color-from-palette($L300);
       color: white;
       margin: 10px;
@@ -35,6 +36,13 @@ header{
 
   }
 
+}
+.enlace-menu{
+  margin-top: 10px;
+}
+label{
+  color: white;
+  font-size: 24px;
 }
 ::ng-deep .menu-nav{
   background-color: mat.get-color-from-palette($L800);

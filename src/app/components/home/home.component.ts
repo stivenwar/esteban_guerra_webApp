@@ -18,27 +18,21 @@ export class HomeComponent implements OnInit {
   vez: string|any
   sizeScreenBool: boolean|any;
 
-  constructor(public dialog:MatDialog, public mediaMatch: MediaMatcher) {
+  constructor(public dialog:MatDialog) {
     this.nameHome = localStorage.getItem('name_init')!= null && localStorage!= undefined ? localStorage.getItem('name_init'):'desconocido'
     this.vez = localStorage.getItem('once')!= null && localStorage!= undefined ? localStorage.getItem('once'):'0'
 
 
   }
   ngOnInit(): void {
-      this.vez == '0' ? this.openDialog():this.myTyped();
-      const media = this.mediaMatch.matchMedia('(max-width: 650px)');
-      
+      //this.vez == '0' ? this.openDialog():this.myTyped();
+      this.myTyped();
   }
-  @HostListener('window:resize', ['event'])
-  onResize(event: any){
-    const media = this.mediaMatch.matchMedia('(max-width: 650px)')
-    console.log(media.matches);
-    this.sizeScreenBool = media.matches;
-  }
+
 
    myTyped(){
     this.typed = new Typed('#typed',{
-      strings: ['<span>Hola </span>'+this.nameHome,'Bienvenido a mi Pagina Web de Angular'],
+      strings: ['<span>Hola, </span>Bienvenido a mi Pagina Web de Angular'],
       typeSpeed: 100
     })
   }

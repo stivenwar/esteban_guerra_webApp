@@ -1,8 +1,8 @@
-<section class="section_container">
+<section [ngClass]="{'section_container':mediaCambio===false,'section_container_phone':mediaCambio===true}">
 
     <mat-card class="left_div" >
       <mat-card-content >
-          <button *ngFor="let b of buttonsToInfo"  mat-stroked-button (click)="getInfoButton(b.buttonNumber)">{{b.buttonName}}</button>
+          <button *ngFor="let b of buttonsToInfo"  mat-button (click)="getInfoButton(b.buttonNumber)">{{b.buttonName}}</button>
       </mat-card-content>
     </mat-card>
 

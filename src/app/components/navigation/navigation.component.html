@@ -1,22 +1,22 @@
 <header >
   <mat-toolbar >
-      <a routerLink="home" mat-button ><mat-icon class="icon-nav">home</mat-icon></a>
+      <a routerLink="home" mat-button ><mat-icon class="icon-nav">home</mat-icon><label>StivenWar</label></a>
       <div *ngIf="mediaCambio=== false" class="div_enlaces">
-        <a mat-raised-button routerLink="about" > About me</a>
-        <a mat-raised-button routerLink="cv"> My CV</a>
-        <a mat-raised-button>building...</a>
-        <a mat-raised-button>building...</a>
+        <a class="enlace" mat-raised-button routerLink="about" > About me</a>
+        <a class="enlace" mat-raised-button routerLink="cv"> My CV</a>
+        <a class="enlace" mat-raised-button>login</a>
+        <a class="enlace" mat-raised-button>signup</a>
       </div>
-      <div *ngIf="mediaCambio=== true" class="div_enlaces">
-        <a  mat-raised-button [matMenuTriggerFor]="menu">Menu</a>
+      <div *ngIf="mediaCambio=== true">
+        <a  [matMenuTriggerFor]="menu"><mat-icon class="icon-nav enlace-menu">menu</mat-icon></a>
       </div>
   </mat-toolbar>
   
 <mat-menu class="menu-nav" #menu="matMenu">
     <a mat-menu-item routerLink="about" > About me</a>
    <a mat-menu-item  routerLink="cv"> My CV</a>
-   <a mat-menu-item >building...</a>
-    <a mat-menu-item>building...</a>
+   <a mat-menu-item >login</a>
+    <a mat-menu-item>signup</a>
 </mat-menu>
 </header>
 

@@ -3,25 +3,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url('../../../assets/img/technology-programming.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 
   span {
     font-size: 3rem;
     font-weight: 1000;
     font-family: "Courier New";
+    color: white;
 
 
   }
 }
-.screen-xl{
-  background-image: url('/assets/img/programar.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-}
-.screen-m{
-  background-image: url('/assets/img/programar.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 80%;
 
-}
 
