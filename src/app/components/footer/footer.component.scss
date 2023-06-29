@@ -1,0 +1,5 @@
+@use '@angular/material' as mat;
+@import "src/styles";
+mat-toolbar{
+  background-color: mat.get-color-from-palette($L800);
+}
