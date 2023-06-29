@@ -2,7 +2,7 @@
   <mat-toolbar >
       <a routerLink="home" mat-button ><mat-icon class="icon-nav">home</mat-icon><label>StivenWar</label></a>
       <div *ngIf="mediaCambio=== false" class="div_enlaces">
-        <a class="enlace" mat-raised-button routerLink="about" > About me</a>
+        <a class="enlace" mat-raised-button (click)="scroll('aboutMe')" > About me</a>
         <a class="enlace" mat-raised-button routerLink="cv"> My CV</a>
         <a class="enlace" mat-raised-button>login</a>
         <a class="enlace" mat-raised-button>signup</a>
@@ -10,8 +10,14 @@
       <div *ngIf="mediaCambio=== true">
         <a  [matMenuTriggerFor]="menu"><mat-icon class="icon-nav enlace-menu">menu</mat-icon></a>
       </div>
+    <mat-tab-group (selectedTabChange)="scroll($event)" animationDuration="0ms">
+     <mat-tab label="About me" ></mat-tab>
+      <mat-tab label="CV">Content 2</mat-tab>
+      <mat-tab label="Login">Content 3</mat-tab>
+      <mat-tab label="Sign in">Content 3</mat-tab>
+    </mat-tab-group>
   </mat-toolbar>
-  
+
 <mat-menu class="menu-nav" #menu="matMenu">
     <a mat-menu-item routerLink="about" > About me</a>
    <a mat-menu-item  routerLink="cv"> My CV</a>

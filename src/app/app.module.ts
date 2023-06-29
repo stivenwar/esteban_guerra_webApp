@@ -23,6 +23,8 @@ import {MatInputModule} from "@angular/material/input";
 import {MatListModule} from "@angular/material/list";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatMenuModule} from '@angular/material/menu';
+import { FooterComponent } from './components/footer/footer.component';
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -32,25 +34,27 @@ import {MatMenuModule} from '@angular/material/menu';
     HomeComponent,
     AlertHomeNameComponent,
     CurriculumComponent,
+    FooterComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatButtonModule,
-        MatDividerModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatDialogModule,
-        MatInputModule,
-        MatListModule,
-        MatProgressBarModule,
-        LayoutModule,
-        MatMenuModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatInputModule,
+    MatListModule,
+    MatProgressBarModule,
+    LayoutModule,
+    MatMenuModule,
+    MatTabsModule
+  ],
   providers: [
     // { provide: APP_BASE_HREF, useValue: '/' },
     // { provide: LocationStrategy, useClass: HashLocationStrategy }

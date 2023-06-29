@@ -12,13 +12,13 @@ export class NavigationComponent implements OnInit {
   mediaCambio = false;
 
   constructor(public matcher: MediaMatcher) { }
- 
+
   ngOnInit(): void {
 
     const media = this.matcher.matchMedia('(max-width: 650px)')
     this.mediaCambio = media.matches;
-  
-    
+
+
   }
   @HostListener('window:resize', ['event'])
   onResize(event: any){
@@ -27,7 +27,10 @@ export class NavigationComponent implements OnInit {
     this.mediaCambio = media.matches;
   }
 
- 
-  
 
+  scroll(event: any){
+    console.log(event);
+    /*let prueba = document.getElementById(id);
+    prueba!.scrollIntoView({ behavior: "smooth", block: "start"});*/
+  }
 }
