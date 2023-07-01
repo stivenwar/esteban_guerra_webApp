@@ -1,28 +1,35 @@
-<header >
+<header>
   <mat-toolbar >
-      <a routerLink="home" mat-button ><mat-icon class="icon-nav">home</mat-icon><label>StivenWar</label></a>
-      <div *ngIf="mediaCambio=== false" class="div_enlaces">
-        <a class="enlace" mat-raised-button (click)="scroll('aboutMe')" > About me</a>
-        <a class="enlace" mat-raised-button routerLink="cv"> My CV</a>
-        <a class="enlace" mat-raised-button>login</a>
-        <a class="enlace" mat-raised-button>signup</a>
+      <a routerLink="home" (click)="goToTop()" mat-button ><mat-icon class="icon-nav">home</mat-icon><label>StivenWar</label></a>
+<!--      <div *ngIf="mediaCambio=== false" class="div_enlaces">-->
+<!--        <a class="enlace" mat -raised-button (click)="scroll('aboutMe')" > About me</a>-->
+<!--        <a class="enlace" mat-raised-button routerLink="cv"> My CV</a>-->
+<!--        <a class="enlace" mat-raised-button>login</a>-->
+<!--        <a class="enlace" mat-raised-button>signup</a>-->
+<!--      </div>-->
+
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+    <nav *ngIf="!mediaCambio"  mat-tab-nav-bar [tabPanel]="tabPanel">
+      <a class="enlace"  mat-tab-link [active]="activeLink == 'proyects'" (click)="scroll('proyects')" > My Proyects</a>
+      <a class="enlace"  mat-tab-link [active]="activeLink == 'aboutMe'"  (click)="scroll('aboutMe')" > About me</a>
+      <a class="enlace"  mat-tab-link [active]="activeLink == 'aboutMe'"(click)="scroll('curriculum')" >My CV</a>
+      <a class="enlace"  mat-tab-link [active]="activeLink == 'contactMe'" (click)="scroll('contactMe')" > Contact me</a>
+
+    </nav>
+      <div *ngIf="mediaCambio">
+
+        <a><mat-icon class="icon-nav enlace-menu">menu</mat-icon></a>
+<!--        <a  [matMenuTriggerFor]="menu"><mat-icon class="icon-nav enlace-menu">menu</mat-icon></a>-->
       </div>
-      <div *ngIf="mediaCambio=== true">
-        <a  [matMenuTriggerFor]="menu"><mat-icon class="icon-nav enlace-menu">menu</mat-icon></a>
-      </div>
-    <mat-tab-group (selectedTabChange)="scroll($event)" animationDuration="0ms">
-     <mat-tab label="About me" ></mat-tab>
-      <mat-tab label="CV">Content 2</mat-tab>
-      <mat-tab label="Login">Content 3</mat-tab>
-      <mat-tab label="Sign in">Content 3</mat-tab>
-    </mat-tab-group>
+
   </mat-toolbar>
 
-<mat-menu class="menu-nav" #menu="matMenu">
-    <a mat-menu-item routerLink="about" > About me</a>
-   <a mat-menu-item  routerLink="cv"> My CV</a>
-   <a mat-menu-item >login</a>
-    <a mat-menu-item>signup</a>
-</mat-menu>
+<!--<mat-menu class="menu-nav" #menu="matMenu">-->
+<!--  <a mat-menu-item  (click)="scroll('proyects')"> My Proyects</a>-->
+<!--    <a mat-menu-item  (click)="scroll('aboutMe')" > About me</a>-->
+<!--  <a mat-menu-item (click)="scroll('curriculum')"> My CV</a>-->
+<!--   <a mat-menu-item  (click)="scroll('contactMe')">Contact me</a>-->
+
+<!--</mat-menu>-->
 </header>
 

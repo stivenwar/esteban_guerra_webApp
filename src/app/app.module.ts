@@ -25,6 +25,10 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatMenuModule} from '@angular/material/menu';
 import { FooterComponent } from './components/footer/footer.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import { ProyectsComponent } from './components/proyects/proyects.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import { ContactComponent } from './components/contact/contact.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
@@ -35,6 +39,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     AlertHomeNameComponent,
     CurriculumComponent,
     FooterComponent,
+    ProyectsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +59,9 @@ import {MatTabsModule} from "@angular/material/tabs";
     MatProgressBarModule,
     LayoutModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    MatGridListModule,
+    MatSidenavModule
   ],
   providers: [
     // { provide: APP_BASE_HREF, useValue: '/' },

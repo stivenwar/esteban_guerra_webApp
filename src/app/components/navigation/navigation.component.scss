@@ -9,6 +9,7 @@ header{
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 .icon-nav{
   color: mat.get-color-from-palette($L300);
@@ -24,18 +25,19 @@ header{
   .text{
     white-space: normal;
   }
-  .div_enlaces{
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: center;
-    .enlace{
-      background-color: mat.get-color-from-palette($L300);
-      color: white;
-      margin: 10px;
-    }
-
+  //.div_enlaces{
+  //  display: flex;
+  //  flex-wrap: wrap;
+  //  justify-items: center;
+  //
+  //
+  //}
+  .enlace{
+    color: white;
   }
-
+}
+::ng-deep .mat-ink-bar {
+  background-color: white !important;
 }
 .enlace-menu{
   margin-top: 10px;
@@ -47,8 +49,9 @@ label{
 ::ng-deep .menu-nav{
   background-color: mat.get-color-from-palette($L800);
   a{
-    background-color: mat.get-color-from-palette($L300);
+    background-color: mat.get-color-from-palette($L800);
     color: white;
     margin: 10px;
   }
 }
+

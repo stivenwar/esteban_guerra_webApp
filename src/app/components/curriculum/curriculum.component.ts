@@ -28,15 +28,13 @@ export class CurriculumComponent implements OnInit {
   ngOnInit(): void {
 
     const media = this.matcher.matchMedia('(max-width: 650px)')
-    console.log(media)
     this.mediaCambio = media.matches;
-  
-    
+
+
   }
   @HostListener('window:resize', ['event'])
   onResize(event: any){
     const media = this.matcher.matchMedia('(max-width: 650px)')
-    console.log(media.matches);
     this.mediaCambio = media.matches;
   }
 

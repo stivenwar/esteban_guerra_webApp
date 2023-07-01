@@ -1,3 +1,39 @@
-<app-navigation></app-navigation>
-<mat-divider></mat-divider>
-<router-outlet></router-outlet>
+<mat-drawer-container class="my-container">
+
+  <mat-drawer #drawer class="my-drawer" mode="over" position="start">
+    <mat-list >
+      <mat-list-item *ngFor="let n of scrollGo">
+        <a mat-button class="enlace"  (click)="scroll(n.name)" > {{n.tab}}</a>
+      </mat-list-item>
+
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="my-drawer-content">
+        <mat-toolbar >
+          <a routerLink="home" (click)="goToTop()" mat-button ><mat-icon class="icon-nav">home</mat-icon><label>StivenWar</label></a>
+
+          <mat-tab-nav-panel #tabPanel>
+
+          </mat-tab-nav-panel>
+          <nav *ngIf="!mediaCambio"  mat-tab-nav-bar [tabPanel]="tabPanel">
+            <a *ngFor="let n of scrollGo" class="enlace"  mat-tab-link [active]="activeLink == n.name" (click)="scroll(n.name)" > {{n.tab}}</a>
+          </nav>
+          <div *ngIf="mediaCambio">
+            <a  (click)="drawer.toggle()">
+              <mat-icon class="icon-nav enlace-menu">menu</mat-icon>
+            </a>
+<!--            <a><mat-icon class="icon-nav enlace-menu">menu</mat-icon></a>-->
+            <!--        <a  [matMenuTriggerFor]="menu"><mat-icon class="icon-nav enlace-menu">menu</mat-icon></a>-->
+          </div>
+
+        </mat-toolbar>
+
+    </div>
+    <mat-divider></mat-divider>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+

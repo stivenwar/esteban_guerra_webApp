@@ -2,10 +2,10 @@
 @import "src/styles";
 
 .section_container_phone{
-  margin: 100px auto;
+
   display: flex;
   flex-direction: column;
-  width: 95%;
+
   overflow: hidden;
   .left_div{
    margin-bottom: 20px;
@@ -24,19 +24,17 @@
   .righ_div{
     background-color: mat.get-color-from-palette($L300);
   }
-  
+
 }
  .section_container{
   display: flex;
   height: 99%;
-  width: 95%;
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
 
   .left_div{
     background-color: mat.get-color-from-palette($L300);
-    margin: 100px auto;
     width: 30%;
     height: 80%;
 
@@ -50,7 +48,7 @@
         color: white;
         border-radius: 0;
         border-bottom: solid 2px;
-       
+
 
       }
     }
@@ -58,7 +56,6 @@
   }
   .righ_div{
     background-color: mat.get-color-from-palette($L300);
-    margin: 100px auto;
     width: 80%;
     height: 80%;
     .card_template{
@@ -77,7 +74,7 @@
     }
 
   }
-} 
+}
 
 
 

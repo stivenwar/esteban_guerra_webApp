@@ -1,1 +1,69 @@
+@use '@angular/material' as mat;
+@import "src/styles";
+.example-spacer {
+  flex: 1 1 auto;
+}
+.icon-nav{
+  color: mat.get-color-from-palette($L300);
+}
+.mat-toolbar{
+  background-color: mat.get-color-from-palette($L800);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  padding: 10px;
+
+  .text{
+    white-space: normal;
+  }
+  //.div_enlaces{
+  //  display: flex;
+  //  flex-wrap: wrap;
+  //  justify-items: center;
+  //
+  //
+  //}
+
+}
+.enlace{
+  color: white;
+}
+::ng-deep .mat-ink-bar {
+  background-color: white !important;
+}
+.enlace-menu{
+  margin-top: 10px;
+}
+label{
+  color: white;
+  font-size: 24px;
+}
+::ng-deep .menu-nav{
+  background-color: mat.get-color-from-palette($L800);
+  a{
+    background-color: mat.get-color-from-palette($L800);
+    color: white;
+    margin: 10px;
+  }
+}
+.my-container{
+  height: 99%;
+  .my-drawer {
+    padding: 20%;
+    background-color: mat.get-color-from-palette($L300);
+    color: white;
+  }
+  .my-drawer-content {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
 

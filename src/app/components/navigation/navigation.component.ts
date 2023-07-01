@@ -1,6 +1,6 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Component, HostListener, OnInit } from '@angular/core';
-import { log } from 'console';
+
 
 @Component({
   selector: 'app-navigation',
@@ -10,9 +10,10 @@ import { log } from 'console';
 export class NavigationComponent implements OnInit {
   shouldRun: any;
   mediaCambio = false;
-
-  constructor(public matcher: MediaMatcher) { }
-
+  activeLink: string;
+  constructor(public matcher: MediaMatcher) {
+    this.activeLink = '';
+  }
   ngOnInit(): void {
 
     const media = this.matcher.matchMedia('(max-width: 650px)')
@@ -23,14 +24,19 @@ export class NavigationComponent implements OnInit {
   @HostListener('window:resize', ['event'])
   onResize(event: any){
     const media = this.matcher.matchMedia('(max-width: 650px)')
-    console.log(media.matches);
     this.mediaCambio = media.matches;
   }
 
+  scroll(id: string){
+    this.activeLink = id;
+    let prueba = document.getElementById(id);
+    console.log(prueba);
+    prueba!.scrollIntoView({ behavior: "smooth", block: "start"});
 
-  scroll(event: any){
-    console.log(event);
-    /*let prueba = document.getElementById(id);
-    prueba!.scrollIntoView({ behavior: "smooth", block: "start"});*/
+  }
+
+
+  goToTop() {
+    window.scrollTo(0,0);
   }
 }
