@@ -1,11 +1,9 @@
-import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import Typed  from 'typed.js'
 import {MatDialog} from "@angular/material/dialog";
-import {AboutMeComponent} from "../about-me/about-me.component";
+
 
 import {AlertHomeNameComponent} from "./alert-home-name/alert-home-name.component";
-import { MediaMatcher } from '@angular/cdk/layout';
-import { log } from 'console';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -32,7 +30,7 @@ export class HomeComponent implements OnInit {
 
    myTyped(){
     this.typed = new Typed('#typed',{
-      strings: ['<span>Hola, </span>Bienvenido a mi Pagina Web de Angular'],
+      strings: ['Esteban Guerra Developer <>'],
       typeSpeed: 100
     })
   }

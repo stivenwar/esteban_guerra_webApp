@@ -24,6 +24,7 @@ header{
 
   .text{
     white-space: normal;
+
   }
   //.div_enlaces{
   //  display: flex;
@@ -45,6 +46,7 @@ header{
 label{
   color: white;
   font-size: 24px;
+
 }
 ::ng-deep .menu-nav{
   background-color: mat.get-color-from-palette($L800);

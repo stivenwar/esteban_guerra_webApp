@@ -29,6 +29,8 @@ import { ProyectsComponent } from './components/proyects/proyects.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { ContactComponent } from './components/contact/contact.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatSliderModule} from "@angular/material/slider";
 
 @NgModule({
   declarations: [
@@ -42,27 +44,29 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     ProyectsComponent,
     ContactComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatDividerModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatDialogModule,
-    MatInputModule,
-    MatListModule,
-    MatProgressBarModule,
-    LayoutModule,
-    MatMenuModule,
-    MatTabsModule,
-    MatGridListModule,
-    MatSidenavModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatDividerModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatDialogModule,
+        MatInputModule,
+        MatListModule,
+        MatProgressBarModule,
+        LayoutModule,
+        MatMenuModule,
+        MatTabsModule,
+        MatGridListModule,
+        MatSidenavModule,
+        MatExpansionModule,
+        MatSliderModule
+    ],
   providers: [
     // { provide: APP_BASE_HREF, useValue: '/' },
     // { provide: LocationStrategy, useClass: HashLocationStrategy }

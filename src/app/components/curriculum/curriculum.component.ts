@@ -1,9 +1,8 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
 import {CvInterface} from "../../interfaces/cv-interface";
 import * as info from "../../../assets/json/info.json"
-import {Observable} from "rxjs";
 import { MediaMatcher } from '@angular/cdk/layout';
-import { log } from 'console';
+import {MatAccordion} from "@angular/material/expansion";
 
 @Component({
   selector: 'app-curriculum',
@@ -11,22 +10,28 @@ import { log } from 'console';
   styleUrls: ['./curriculum.component.scss']
 })
 export class CurriculumComponent implements OnInit {
+  @ViewChild(MatAccordion) accordion: MatAccordion | undefined;
 
-  textInfo: CvInterface["buttonOpenInfo"] | undefined
+  textInfo: CvInterface[]
   buttonInfo: number
   buttonsToInfo: CvInterface[]
   data: any
   titleFromButton: string
   mediaCambio: boolean| undefined
+  panelOpenState: boolean;
   constructor(private matcher: MediaMatcher) {
     this.data = info
+    this.textInfo = []
     this.buttonsToInfo = this.data.info
     this.buttonInfo = 0
     this.titleFromButton = ''
+    this.panelOpenState = false
   }
 
   ngOnInit(): void {
 
+    this.buttonsToInfo.forEach(e => this.textInfo.push(e))
+    console.log(this.textInfo)
     const media = this.matcher.matchMedia('(max-width: 650px)')
     this.mediaCambio = media.matches;
 
@@ -40,12 +45,18 @@ export class CurriculumComponent implements OnInit {
 
 
   getInfoButton(buttonNumber: number) {
-    console.log(this.textInfo)
-    this.buttonInfo = buttonNumber;
-    this.textInfo = this.buttonsToInfo[this.buttonInfo].buttonOpenInfo;
-    console.log(this.textInfo);
-    this.titleFromButton = this.buttonsToInfo[buttonNumber].title;
+    // console.log(this.textInfo)
+    // this.buttonInfo = buttonNumber;
+    // this.textInfo = this.buttonsToInfo[this.buttonInfo].buttonOpenInfo;
+    // console.log(this.textInfo);
+    // this.titleFromButton = this.buttonsToInfo[buttonNumber].title;
 
 
+  }
+
+  protected readonly event = event;
+
+  panelEvent(event: number) {
+    console.log(event)
   }
 }

@@ -3,7 +3,7 @@
   <mat-drawer #drawer class="my-drawer" mode="over" position="start">
     <mat-list >
       <mat-list-item *ngFor="let n of scrollGo">
-        <a mat-button class="enlace"  (click)="scroll(n.name)" > {{n.tab}}</a>
+        <a mat-button class="enlace"  (click)="scroll(n.name);drawer.toggle()" > {{n.tab}}</a>
       </mat-list-item>
 
     </mat-list>
@@ -11,8 +11,7 @@
   <mat-drawer-content>
     <div class="my-drawer-content">
         <mat-toolbar >
-          <a routerLink="home" (click)="goToTop()" mat-button ><mat-icon class="icon-nav">home</mat-icon><label>StivenWar</label></a>
-
+          <a (click)="scroll('home')" mat-button ><label >Esteban Guerra</label></a>
           <mat-tab-nav-panel #tabPanel>
 
           </mat-tab-nav-panel>
@@ -23,12 +22,8 @@
             <a  (click)="drawer.toggle()">
               <mat-icon class="icon-nav enlace-menu">menu</mat-icon>
             </a>
-<!--            <a><mat-icon class="icon-nav enlace-menu">menu</mat-icon></a>-->
-            <!--        <a  [matMenuTriggerFor]="menu"><mat-icon class="icon-nav enlace-menu">menu</mat-icon></a>-->
           </div>
-
         </mat-toolbar>
-
     </div>
     <mat-divider></mat-divider>
     <router-outlet></router-outlet>

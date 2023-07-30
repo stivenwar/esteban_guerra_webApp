@@ -1,5 +1,10 @@
 @use '@angular/material' as mat;
 @import "src/styles";
+*{
+  font-family: "sans-serif";
+  font-size: 25px;
+
+}
 .example-spacer {
   flex: 1 1 auto;
 }
@@ -10,7 +15,7 @@
   background-color: mat.get-color-from-palette($L800);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   height: auto;
   padding: 10px;
 
@@ -61,6 +66,11 @@ label{
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+@media all and (max-width: 830px) {
+  .mat-toolbar{
+  justify-content: center;
   }
 }
 

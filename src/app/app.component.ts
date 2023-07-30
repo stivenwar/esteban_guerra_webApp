@@ -39,13 +39,8 @@ export class AppComponent {
   scroll(id: string){
     this.activeLink = id;
     let prueba = document.getElementById(id);
-    console.log(prueba);
     prueba!.scrollIntoView({ behavior: "smooth", block: "start"});
 
   }
 
-
-  goToTop() {
-    window.scrollTo(0,0);
-  }
 }
