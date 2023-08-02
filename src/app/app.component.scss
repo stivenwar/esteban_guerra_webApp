@@ -1,10 +1,6 @@
 @use '@angular/material' as mat;
 @import "src/styles";
-*{
-  font-family: "sans-serif";
-  font-size: 25px;
 
-}
 .example-spacer {
   flex: 1 1 auto;
 }
@@ -31,8 +27,12 @@
   //}
 
 }
+
 .enlace{
   color: white;
+  font-family: 'sans-serif';
+  font-size: 25px;
+
 }
 ::ng-deep .mat-ink-bar {
   background-color: white !important;
@@ -53,7 +53,7 @@ label{
   }
 }
 .my-container{
-  height: 99%;
+  height: 100%;
   .my-drawer {
     padding: 20%;
     background-color: mat.get-color-from-palette($L300);
@@ -66,6 +66,11 @@ label{
     display: flex;
     align-items: center;
     justify-content: center;
+    label{
+      font-family: "sans-serif";
+      font-size: 25px;
+
+    }
   }
 }
 @media all and (max-width: 830px) {

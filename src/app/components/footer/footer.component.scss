@@ -2,10 +2,11 @@
 @import "src/styles";
 *{
   font-family: sans-serif;
+
 }
 mat-toolbar{
   background-color: mat.get-color-from-palette($L800);
-
+  height: auto;
   mat-toolbar-row{
     justify-content: center;
   }

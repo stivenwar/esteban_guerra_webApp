@@ -19,7 +19,7 @@ $LA300: mat.define-palette(mat.$blue-palette,A400);
 $LA700: mat.define-palette(mat.$blue-palette,A700);
 $TEAL50: mat.define-palette(mat.$teal-palette,200);
 
-html, body {height: 100%; background-color: mat.get-color-from-palette($TEAL50);scroll-behavior: smooth;}
+html, body {height: 100%; background-color: mat.get-color-from-palette($L100);scroll-behavior: smooth;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .typed-cursor{
   font-size: 2rem !important;
