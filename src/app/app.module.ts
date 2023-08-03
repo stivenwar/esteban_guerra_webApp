@@ -31,6 +31,12 @@ import { ContactComponent } from './components/contact/contact.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatSliderModule} from "@angular/material/slider";
+import {IonicAppComponent} from "./components/proyects/ionic-app/ionic-app.component";
+import {IonicModule} from "@ionic/angular";
+import { AngularAppUsersComponent } from './components/proyects/angular-app-users/angular-app-users.component';
+import {HttpClientModule} from "@angular/common/http";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+
 
 @NgModule({
   declarations: [
@@ -43,30 +49,36 @@ import {MatSliderModule} from "@angular/material/slider";
     FooterComponent,
     ProyectsComponent,
     ContactComponent,
+    IonicAppComponent,
+    AngularAppUsersComponent,
+
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatButtonModule,
-        MatDividerModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatDialogModule,
-        MatInputModule,
-        MatListModule,
-        MatProgressBarModule,
-        LayoutModule,
-        MatMenuModule,
-        MatTabsModule,
-        MatGridListModule,
-        MatSidenavModule,
-        MatExpansionModule,
-        MatSliderModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatInputModule,
+    MatListModule,
+    MatProgressBarModule,
+    LayoutModule,
+    MatMenuModule,
+    MatTabsModule,
+    MatGridListModule,
+    MatSidenavModule,
+    MatExpansionModule,
+    MatSliderModule,
+    IonicModule.forRoot(),
+    HttpClientModule,
+    MatProgressSpinnerModule
+  ],
   providers: [
     // { provide: APP_BASE_HREF, useValue: '/' },
     // { provide: LocationStrategy, useClass: HashLocationStrategy }

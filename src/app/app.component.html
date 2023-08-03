@@ -9,7 +9,7 @@
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
-    <div class="my-drawer-content">
+    <div class="my-drawer-content" *ngIf="!service.navBarHidden()">
         <mat-toolbar >
           <a (click)="scroll('home')" mat-button ><label >Esteban Guerra</label></a>
           <mat-tab-nav-panel #tabPanel>

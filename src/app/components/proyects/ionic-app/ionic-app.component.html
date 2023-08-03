@@ -1,16 +1,43 @@
-<ion-toolbar>
-  <ion-buttons slot="secondary">
-    <ion-button>
-      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-    </ion-button>
-    <ion-button>
-      <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
+<ion-toolbar class="fix" color="primary">
+
   <ion-buttons slot="primary">
-    <ion-button>
-      <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-    </ion-button>
+    <input #fileUpload type="file" (click)="fileUpload.value"(change)="importFile($event)" style="display:none"
+           accept="image/*">
+    <ion-button expand="full" (click)="fileUpload.click()"><ion-icon id="icon"  name="document-outline"></ion-icon> </ion-button>
+    <ion-button expand="full" (click)="startScroll()"><ion-icon name="play-outline"></ion-icon></ion-button>
+    <ion-button expand="full" (click)="pauseScroll()"><ion-icon name="pause-outline"></ion-icon></ion-button>
   </ion-buttons>
-  <ion-title>Icon Buttons</ion-title>
+
+  <ion-title>Prompter</ion-title>
 </ion-toolbar>
+
+
+  <div class="c">
+    <div  class="scrolling-container" #scrollingContainer>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at consequuntur esse ex laborum libero magni officia pariatur, possimus temporibus veritatis voluptates! Accusantium dolorem harum impedit nesciunt velit? Eius!</p>
+
+    </div>
+  </div>
+

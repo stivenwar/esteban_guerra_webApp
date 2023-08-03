@@ -1,0 +1,24 @@
+.fix{
+  position: fixed;
+  top: 0;
+}
+#toScroll{
+  margin-top: 60px;
+
+}
+.c{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.scrolling-container {
+  background-color: black;
+  color: white;
+}
+#file{
+  display: none;
+}
+#icon{
+
+  cursor: pointer;
+}
