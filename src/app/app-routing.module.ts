@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from "./components/home/home.component";
 import {AboutMeComponent} from "./components/about-me/about-me.component";
 import {CurriculumComponent} from "./components/curriculum/curriculum.component";
+import {IonicAppComponent} from "./components/proyects/ionic-app/ionic-app.component";
 
 const routes: Routes = [
 
   { path: 'about', component: AboutMeComponent},
+  { path: 'ionic', component: IonicAppComponent},
   { path: 'home', component: HomeComponent},
   { path: 'cv', component: CurriculumComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },

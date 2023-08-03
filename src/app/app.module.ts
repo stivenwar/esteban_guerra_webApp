@@ -31,6 +31,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatSliderModule} from "@angular/material/slider";
+import { IonicModule } from '@ionic/angular';
+import { IonicAppComponent } from './components/proyects/ionic-app/ionic-app.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import {MatSliderModule} from "@angular/material/slider";
     FooterComponent,
     ProyectsComponent,
     ContactComponent,
+    IonicAppComponent,
   ],
     imports: [
         BrowserModule,
@@ -65,7 +68,8 @@ import {MatSliderModule} from "@angular/material/slider";
         MatGridListModule,
         MatSidenavModule,
         MatExpansionModule,
-        MatSliderModule
+        MatSliderModule,
+        IonicModule.forRoot()
     ],
   providers: [
     // { provide: APP_BASE_HREF, useValue: '/' },

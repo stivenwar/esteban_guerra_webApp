@@ -1,6 +1,6 @@
-<mat-drawer-container class="my-container">
+<mat-drawer-container class="my-container" >
 
-  <mat-drawer #drawer class="my-drawer" mode="over" position="start">
+  <mat-drawer #drawer class="my-drawer" mode="over" position="start" >
     <mat-list >
       <mat-list-item *ngFor="let n of scrollGo">
         <a mat-button class="enlace"  (click)="scroll(n.name);drawer.toggle()" > {{n.tab}}</a>
@@ -10,7 +10,7 @@
   </mat-drawer>
   <mat-drawer-content>
     <div class="my-drawer-content">
-        <mat-toolbar >
+        <mat-toolbar  *ngIf="!service.navBarHidden()">
           <a (click)="scroll('home')" mat-button ><label >Esteban Guerra</label></a>
           <mat-tab-nav-panel #tabPanel>
 

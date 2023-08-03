@@ -1,5 +1,6 @@
 import {Component, HostListener} from '@angular/core';
 import {MediaMatcher} from "@angular/cdk/layout";
+import {ServiceService} from "./service.service";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent {
   }>
   mediaCambio = false;
   activeLink: string;
-  constructor(public matcher: MediaMatcher) {
+  constructor(public matcher: MediaMatcher,public service : ServiceService) {
     this.activeLink = '';
     this.scrollGo = [
       {name: 'proyects',tab: 'My proyects'},
@@ -25,6 +26,8 @@ export class AppComponent {
 
   }
   ngOnInit(): void {
+    this.service.setNavBarHidden(false)
+    console.log(this.service.navBarHidden())
     const media = this.matcher.matchMedia('(max-width: 650px)')
     this.mediaCambio = media.matches;
 
