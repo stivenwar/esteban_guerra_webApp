@@ -1,0 +1,18 @@
+<mat-spinner *ngIf="load"></mat-spinner>
+
+<ion-content>
+  <mat-card *ngFor="let users of usersComentsScroll" style="margin: 20px">
+
+    <mat-card-title>Comment number {{users.id}} </mat-card-title>
+    <mat-card-content>
+      Name : {{users.name}} <br>
+      Email : {{users.email}} <br>
+      Comment : {{users.body}} <br>
+    </mat-card-content>
+
+  </mat-card>
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
