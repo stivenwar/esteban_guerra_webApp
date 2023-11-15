@@ -14,10 +14,10 @@ export class IonicAppComponent implements OnInit, OnDestroy,AfterViewInit {
   private currentPosition = 0;
   private scrollAmount = 1; // 1 pixel
   private interval: number
-  private starStop : boolean
+  public building : boolean
   constructor(public service: ServiceServicehidenav, private animationCtrl: AnimationController) {
     this.interval = 0
-    this.starStop = true
+    this.building = false;
   }
 
   ngOnInit(): void {
@@ -43,48 +43,8 @@ export class IonicAppComponent implements OnInit, OnDestroy,AfterViewInit {
 
   }
 
-  startScroll() {
 
-    if (this.starStop){
-      this.starStop = false
-      // @ts-ignore
-      this.interval = setInterval(()=> {
-        this.currentPosition += this.scrollAmount;
-        this.scrollContainer.style.transform = `translateY(-${this.currentPosition}px)`;
-
-        if (this.currentPosition >= this.scrollContainer.clientHeight) {
-          this.currentPosition = 0;
-          this.scrollContainer.style.transform = `translateY(0)`;
-        }
-
-      },10)
-    }
+  build() {
+    !this.building ? this.building = true:this.building = false;
   }
-  pauseScroll(){
-    clearInterval(this.interval)
-    this.starStop =true;
-  }
-
-
-  protected readonly event = event;
-
-  fileChooser(target: EventTarget | null) {
-    console.log(target)
-  }
-
-  importFile($event: Event) {
-    if ($event !== null){
-      // @ts-ignore
-      if ($event.target.files.length == 0) {
-        console.log("No file selected!");
-        return
-      }
-      // @ts-ignore
-      let file: File = $event.target.files[0];
-      console.log(file)
-      // after here 'file' can be accessed and used for further process
-    }
-
-  }
-
 }
