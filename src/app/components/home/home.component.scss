@@ -1,23 +1,38 @@
+@use '@angular/material' as mat;
+
+@import "src/styles";
+.containerAbout{
+  margin-bottom: 15em;
+}
 
 .home_text{
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  //background-image: url('../../../assets/img/technology-programming.jpeg');
-  //background-repeat: no-repeat;
-  //background-size: 100% 100%;
-  //background-position: center;
+  background-image: url('../../../assets/img/class.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  opacity: 0.5;
+  //img{
+  //  width: 100%;
+  //  opacity: 0.5;
+  //  z-index: -1;
+  //}
 
   span {
+    //position: absolute;
     font-size: 3rem;
     font-weight: 1000;
     font-family: "sans-serif";
-    color: black;
+    color:  mat.get-color-from-palette($LA700);
 
 
   }
 }
+
+
 * {
   scroll-margin-top: 76px;
 }

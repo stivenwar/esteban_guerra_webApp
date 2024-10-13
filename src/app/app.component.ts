@@ -14,12 +14,11 @@ export class AppComponent implements OnInit{
     tab: string
   }>
   mediaCambio = false;
-  activeLink: string;
+
   constructor(public matcher: MediaMatcher, public service: ServiceServicehidenav) {
-    this.activeLink = '';
     this.scrollGo = [
+      {name: 'aboutMe',tab:'About Me'},
       {name: 'proyects',tab: 'My proyects'},
-      {name: 'aboutMe',tab:'Abbout Me'},
       {name: 'curriculum',tab:'Curriculum'},
       {name :'contactMe',tab:'Contact me'}]
 
@@ -40,7 +39,6 @@ export class AppComponent implements OnInit{
   }
 
   scroll(id: string){
-    this.activeLink = id;
     let prueba = document.getElementById(id);
     prueba!.scrollIntoView({ behavior: "smooth", block: "start"});
 

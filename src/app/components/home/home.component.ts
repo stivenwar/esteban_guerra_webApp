@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
 
    myTyped(){
     this.typed = new Typed('#typed',{
-      strings: ['Esteban Guerra Developer <>'],
+      strings: ['Full Stack Developer <\\>'],
       typeSpeed: 100
     })
   }

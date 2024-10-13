@@ -1,15 +1,18 @@
 @use '@angular/material' as mat;
 @import "src/styles";
 
+.containerAbout{
+  margin-bottom: 15em;
+}
 .marginInit{
   margin: auto 10%;
 }
 .centerInfo{
   margin: auto;
-  border: 2px solid mat.get-color-from-palette($L800);
-  width: fit-content;
+  //border: 2px solid mat.get-color-from-palette($L800);
+  width: 100%;
   padding: 15px;
-  background-color: mat.get-color-from-palette($L200);
+  //background-color: mat.get-color-from-palette($L200);
 }
 .wrapper {
   grid-column-gap: 20px;

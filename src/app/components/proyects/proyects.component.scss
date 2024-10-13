@@ -1,11 +1,28 @@
 .imgCard{
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
 }
 .title{
   display:flex;
   justify-content: center;
   font-family: 'sans-serif';
+}
+.mat-grid-list{
+  display: block;
+  align-content: center;
+  align-items: center;
+
+}
+fa-icon{
+  font-size: 5em;
+}
+mat-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
 }
 
 

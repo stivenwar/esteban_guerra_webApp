@@ -1,11 +1,32 @@
+<div class="containerAbout">
+  <h1 class="title" style=""> About me</h1>
+  <div class="example-container">
 
-<mat-card class="form-container">
-  <h1 class="title"> Contact</h1>
-  <mat-form-field>
-    <input matInput placeholder="Input">
-  </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter your Name</mat-label>
+      <input matInput placeholder="name" [(ngModel)]="name" required>
+      <!--      <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error>-->
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" [(ngModel)]="email" required>
+      <!--      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>-->
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select</mat-label>
+      <mat-select [(ngModel)]="select">
+        <mat-option value="web_app">Web App</mat-option>
+        <mat-option value="desktop_app">Desktop App</mat-option>
+        <mat-option value="device_app">Device App</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Textarea</mat-label>
+      <textarea [(ngModel)]="message" rows="5" matInput></textarea>
+    </mat-form-field>
+    <button mat-raised-button class="btnColor"  type="submit" (click)="sendMail()">Submit</button>
 
-  <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
-  </mat-form-field>
-</mat-card>
+
+  </div>
+
+</div>

@@ -1,27 +1,32 @@
-<h1 class="title"> My CV</h1>
-<div class="marginInit">
-  <button mat-button (click)="accordion?.closeAll()">Close All</button>
-  <button mat-button (click)="accordion?.openAll()">Open All</button>
-  <mat-accordion multi="true">
-    <mat-expansion-panel   *ngFor="let i of textInfo">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{i.title}}
-        </mat-panel-title>
+<div class="containerAbout">
+  <h1 class="title"> My CV</h1>
+  <div class="marginInit">
+    <button mat-button (click)="accordion?.closeAll()">Close All</button>
+    <button mat-button (click)="accordion?.openAll()">Open All</button>
+    <mat-accordion multi="true">
+      <mat-expansion-panel   *ngFor="let i of textInfo">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{i.title}}
+          </mat-panel-title>
 
-      </mat-expansion-panel-header>
-      <div class="centerInfo" *ngIf="i.buttonNumber!== 3">
-        <p  *ngFor="let e of i.buttonOpenInfo">{{e.info}}</p>
-      </div>
-      <div class="wrapper"   *ngIf="i.buttonNumber=== 3">
-        <div  *ngFor="let e of i.buttonOpenInfo">
-          <h1>{{e.name}}</h1>
-          <mat-progress-bar  mode="determinate" value="{{e.percentage}}"></mat-progress-bar>
+        </mat-expansion-panel-header>
+        <div class="centerInfo" *ngIf="i.buttonNumber!== 3">
+          <ul  *ngFor="let e of i.buttonOpenInfo">
+            <li>{{e.info}}</li>
+          </ul>
+        </div>
+        <div class="wrapper"   *ngIf="i.buttonNumber=== 3">
+          <div  *ngFor="let e of i.buttonOpenInfo">
+            <h1>{{e.name}}</h1>
+            <mat-progress-bar  mode="determinate" value="{{e.percentage}}"></mat-progress-bar>
+          </div>
+
         </div>
 
-      </div>
+      </mat-expansion-panel>
+    </mat-accordion>
 
-    </mat-expansion-panel>
-  </mat-accordion>
+  </div>
 
 </div>

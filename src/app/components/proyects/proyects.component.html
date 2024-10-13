@@ -1,31 +1,38 @@
 <h1 class="title"> My proyects</h1>
-<mat-grid-list  [cols]="cols" rowHeight="350">
+<mat-grid-list  [cols]="cols" rowHeight="3:2">
   <mat-grid-tile>
     <mat-card>
-        <img mat-card-image  class="imgCard" src="assets/img/angular.jpeg"   alt="" >
+      <fa-icon [icon]="faAngular"></fa-icon>
       <mat-card-title>Angular</mat-card-title>
       <mat-card-content><ion-button routerLink="/angularAppUsers">Go to Project</ion-button></mat-card-content>
   </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
     <mat-card >
-      <img mat-card-image class="imgCard"   src="assets/img/express_nodeJs.jpg"  alt="">
+      <fa-icon [icon]="faNode"></fa-icon>
       <mat-card-title>NodeJS</mat-card-title>
-      <mat-card-content><ion-button>Go to Project</ion-button></mat-card-content>
+      <mat-card-content><ion-button href="https://boilerplate-project-filemetadata.esteban-andre12.repl.co/">Go to Project</ion-button></mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
     <mat-card >
-      <img mat-card-image class="imgCard"   src="assets/img/MongoDB-Logo.jpg"  alt="">
+      <fa-icon [icon]="faDatabase"></fa-icon>
       <mat-card-title>Angular</mat-card-title>
-      <mat-card-content><ion-button>Go to Project</ion-button></mat-card-content>
+      <mat-card-content><ion-button href="https://boilerplate-project-exercisetracker.esteban-andre12.repl.co/">Go to Project</ion-button></mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
     <mat-card  >
-      <img mat-card-image class="imgCard"   src="assets/img/framework-og-img.png"  alt="">
+      <fa-icon [icon]="faCircleNotch"></fa-icon>
       <mat-card-title>Ionic</mat-card-title>
       <mat-card-content><ion-button routerLink="/ionicApp">Go to Project</ion-button></mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card  >
+      <fa-icon [icon]="faPhp"></fa-icon>
+      <mat-card-title>PHP</mat-card-title>
+      <mat-card-content><ion-button routerLink="/home">Go to Project</ion-button></mat-card-content>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>

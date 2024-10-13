@@ -4,16 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavigationComponent } from './components/navigation/navigation.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { HomeComponent } from './components/home/home.component';
 import { AlertHomeNameComponent } from './components/home/alert-home-name/alert-home-name.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatDividerModule} from "@angular/material/divider";
-import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatDialogModule} from "@angular/material/dialog";
 import {APP_BASE_HREF, HashLocationStrategy, LocationStrategy} from "@angular/common";
@@ -36,12 +34,15 @@ import {IonicModule} from "@ionic/angular";
 import { AngularAppUsersComponent } from './components/proyects/angular-app-users/angular-app-users.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatCardModule} from "@angular/material/card";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
     AboutMeComponent,
     HomeComponent,
     AlertHomeNameComponent,
@@ -55,14 +56,16 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatDividerModule,
     MatCardModule,
+    MatDividerModule,
     MatFormFieldModule,
     MatDialogModule,
     MatInputModule,
@@ -77,7 +80,11 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     MatSliderModule,
     IonicModule.forRoot(),
     HttpClientModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FontAwesomeModule,
+    MatOptionModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [
     // { provide: APP_BASE_HREF, useValue: '/' },

@@ -2,7 +2,6 @@
 https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
 */
 @use '@angular/material' as mat;
-
 $L50: mat.define-palette(mat.$blue-palette,50);
 $L100: mat.define-palette(mat.$blue-palette,100);
 $L200: mat.define-palette(mat.$blue-palette,200);

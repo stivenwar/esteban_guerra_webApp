@@ -3,7 +3,7 @@
   <mat-drawer #drawer class="my-drawer" mode="over" position="start">
     <mat-list >
       <mat-list-item *ngFor="let n of scrollGo">
-        <a mat-button class="enlace"  (click)="scroll(n.name);drawer.toggle()" > {{n.tab}}</a>
+        <a mat-button class="enlace"  (click)="scroll(n.name);drawer.toggle()" > <label>{{n.tab}}</label></a>
       </mat-list-item>
 
     </mat-list>
@@ -11,13 +11,12 @@
   <mat-drawer-content>
     <div class="my-drawer-content" *ngIf="!service.navBarHidden()">
         <mat-toolbar >
-          <a (click)="scroll('home')" mat-button ><label >Esteban Guerra</label></a>
-          <mat-tab-nav-panel #tabPanel>
+          <a class="enlace" (click)="scroll('home')"  mat-button ><label >Esteban Guerra</label></a>
 
-          </mat-tab-nav-panel>
-          <nav *ngIf="!mediaCambio"  mat-tab-nav-bar [tabPanel]="tabPanel">
-            <a *ngFor="let n of scrollGo" class="enlace"  mat-tab-link [active]="activeLink == n.name" (click)="scroll(n.name)" > {{n.tab}}</a>
+          <nav *ngIf="!mediaCambio"   >
+            <a *ngFor="let n of scrollGo"  mat-button class="enlace"  (click)="scroll(n.name)" > <label class="labelText" >{{n.tab}}</label></a>
           </nav>
+<!--          <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>-->
           <div *ngIf="mediaCambio">
             <a  (click)="drawer.toggle()">
               <mat-icon class="icon-nav enlace-menu">menu</mat-icon>
@@ -32,5 +31,11 @@
 
 </mat-drawer-container>
 
-
+<!--<nav mat-tab-nav-bar [backgroundColor]="'primary'" [tabPanel]="tabPanel2">-->
+<!--  <a mat-tab-link *ngFor="let link of ['primary','secondary','tertiary']"-->
+<!--     (click)="activeLink = link"-->
+<!--     [active]="activeLink == link"> {{link}} </a>-->
+<!--  <a mat-tab-link disabled>Disabled Link</a>-->
+<!--</nav>-->
+<!--<mat-tab-nav-panel #tabPanel2></mat-tab-nav-panel>-->
 

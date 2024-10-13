@@ -1,12 +1,24 @@
-.form-container {
+@use '@angular/material' as mat;
+@import "src/styles";
+
+:host {
   display: flex;
   flex-direction: column;
-  margin: 10% 20%;
-
+  align-items: center;
 }
 .title{
   display:flex;
   justify-content: center;
   font-family: 'sans-serif';
+}
+mat-form-field{
+  width: 100%;
+}
+.containerAbout{
+  margin-bottom: 15em;
+}
+.btnColor{
+  background-color: mat.get-color-from-palette($L800);
+  color: white;
 }
 
