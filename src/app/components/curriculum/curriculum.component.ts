@@ -31,7 +31,7 @@ export class CurriculumComponent implements OnInit {
   ngOnInit(): void {
 
     this.buttonsToInfo.forEach(e => this.textInfo.push(e))
-    console.log(this.textInfo)
+    // console.log(this.textInfo)
     const media = this.matcher.matchMedia('(max-width: 650px)')
     this.mediaCambio = media.matches;
 

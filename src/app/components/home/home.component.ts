@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
       dialogRef.afterClosed().subscribe(async result => {
         console.log(result)
         console.log('The dialog was closed')
-        this.nameHome = result;
+        // this.nameHome = result;
         localStorage.setItem('name_init',this.nameHome)
         localStorage.setItem('once','1')
         await this.myTyped()
