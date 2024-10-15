@@ -56,8 +56,6 @@ import {MatSelectModule} from "@angular/material/select";
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -84,7 +82,7 @@ import {MatSelectModule} from "@angular/material/select";
     FontAwesomeModule,
     MatOptionModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     // { provide: APP_BASE_HREF, useValue: '/' },

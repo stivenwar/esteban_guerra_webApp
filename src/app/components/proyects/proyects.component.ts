@@ -2,7 +2,9 @@ import {Component, HostListener, OnInit} from '@angular/core';
 import {MediaMatcher} from "@angular/cdk/layout";
 import {faAngular,faPhp,faNode} from "@fortawesome/free-brands-svg-icons";
 import {faCircleNotch,faDatabase} from "@fortawesome/free-solid-svg-icons";
+import { library } from '@fortawesome/fontawesome-svg-core';
 
+library.add(faDatabase,faNode,faPhp,faAngular,faCircleNotch)
 
 @Component({
   selector: 'app-proyects',
@@ -13,6 +15,7 @@ export class ProyectsComponent implements OnInit {
 
   cols: number
   sizesScreen: Array<string>
+
   faAngular = faAngular
   faPhp = faPhp
   faNode = faNode
