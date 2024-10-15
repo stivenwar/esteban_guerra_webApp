@@ -85,7 +85,7 @@ import {MatSelectModule} from "@angular/material/select";
     ReactiveFormsModule,
   ],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/esteban_guerra_webApp/' },
+    // { provide: APP_BASE_HREF, useValue: '/esteban_guerra_webApp/' },
     // { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
